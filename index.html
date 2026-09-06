@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranchazo — Dip / Aderezo tipo Ranch</title>
+<meta name="description" content="Ranchazo: mezcla de especias para preparar tu propio dip o aderezo tipo ranch. Solo agrega crema ácida. Disponible en tira de 12 sobres, 250 g y 500 g.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rye&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0F6734;
+    --green-dark:#0A4A25;
+    --green-darker:#082F19;
+    --gold:#F39019;
+    --gold-dark:#B77D00;
+    --cream:#F5EDD9;
+    --cream-deep:#EADFC0;
+    --cream-line:#DCCB9E;
+    --ink:#1C1B12;
+    --ink-soft:#4A4630;
+    --shadow: 0 6px 0 rgba(15,103,52,0.12);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Nunito', system-ui, sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{ max-width:100%; display:block; }
+  h1,h2,h3{
+    font-family:'Anton', system-ui, sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:1.02;
+    margin:0;
+  }
+  a{ color:inherit; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px; }
+  section{ padding:88px 0; position:relative; }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+    display:inline-block;
+    margin-bottom:14px;
+  }
+  .lede{ font-size:18px; color:var(--ink-soft); max-width:56ch; margin-top:16px; }
+
+  /* -------- Buttons -------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'Nunito',sans-serif; font-weight:800; font-size:16px;
+    padding:16px 30px; border-radius:999px; text-decoration:none;
+    border:3px solid var(--ink); box-shadow:4px 4px 0 var(--ink);
+    transition:transform .12s ease, box-shadow .12s ease;
+    white-space:normal; max-width:100%; text-align:center; justify-content:center;
+  }
+  .btn:hover{ transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--ink); }
+  .btn:active{ transform:translate(1px,1px); box-shadow:2px 2px 0 var(--ink); }
+  .btn-gold{ background:var(--gold); color:var(--ink); }
+  .btn-green{ background:var(--green); color:var(--cream); border-color:var(--green-darker); box-shadow:4px 4px 0 var(--green-darker); }
+  .btn-green:hover{ box-shadow:6px 6px 0 var(--green-darker); }
+  .btn-outline{ background:transparent; color:var(--ink); }
+
+  /* -------- Header -------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--green);
+    border-bottom:4px solid var(--green-darker);
+  }
+  header .wrap{ display:flex; align-items:center; justify-content:space-between; gap:20px; padding-top:12px; padding-bottom:12px; }
+  header .logo img{ height:40px; width:auto; }
+  nav{ display:flex; align-items:center; gap:28px; }
+  nav a{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;
+    letter-spacing:0.08em; text-transform:uppercase; color:var(--cream);
+    text-decoration:none; opacity:0.88;
+  }
+  nav a:hover{ opacity:1; text-decoration:underline; text-underline-offset:4px; }
+  .nav-links{ display:flex; gap:26px; }
+  header .btn{ padding:10px 20px; font-size:13.5px; }
+  @media (max-width:760px){ .nav-links{ display:none; } }
+
+  /* -------- Hero -------- */
+  .hero{ padding-top:64px; padding-bottom:0; overflow:visible; }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.05fr 0.95fr; align-items:center; gap:40px;
+  }
+  .hero h1{ font-size:clamp(46px,7vw,84px); color:var(--green); text-shadow:3px 3px 0 var(--gold); }
+  .hero .sub{
+    font-family:'Nunito',sans-serif; font-style:italic; font-weight:800; font-size:clamp(18px,2.4vw,24px);
+    color:var(--gold-dark); margin-top:14px;
+  }
+  .hero p.lede{ margin-top:20px; }
+  .hero .steps-line{
+    margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;
+    letter-spacing:0.06em; text-transform:uppercase; color:var(--green-dark);
+  }
+  .hero .cta-row{ margin-top:32px; display:flex; gap:16px; flex-wrap:wrap; }
+  .hero-art{ position:relative; }
+  .hero-art img{
+    width:100%; max-width:480px; margin:0 auto; filter:drop-shadow(0 20px 24px rgba(28,27,18,0.25));
+  }
+  .hero-badge{
+    position:absolute; top:-6px; right:6px;
+    background:var(--gold); color:var(--ink); border:3px solid var(--ink);
+    border-radius:50%; width:112px; height:112px; display:flex; align-items:center; justify-content:center;
+    text-align:center; font-family:'Rye',serif; font-size:12px; line-height:1.35; transform:rotate(8deg);
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  @media (max-width:860px){
+    .hero .wrap{ grid-template-columns:1fr; text-align:center; }
+    .hero p.lede{ margin-left:auto; margin-right:auto; }
+    .hero .cta-row{ justify-content:center; }
+    .hero-art img{ max-width:340px; }
+  }
+
+  /* -------- Qué es -------- */
+  .quees{ background:var(--cream-deep); border-top:2px solid var(--cream-line); border-bottom:2px solid var(--cream-line); }
+  .quees .wrap{ max-width:760px; text-align:center; }
+  .quees h2{ font-size:clamp(32px,5vw,48px); color:var(--green); }
+  .quees p{ font-size:18px; margin-top:18px; color:var(--ink-soft); }
+  .quees p strong{ color:var(--ink); }
+
+  /* -------- Antojo -------- */
+  .antojo h2{ font-size:clamp(32px,5vw,52px); color:var(--green); }
+  .antojo .highlight{
+    font-family:'Nunito',sans-serif; font-style:italic; font-weight:800; font-size:22px;
+    color:var(--gold-dark); margin-top:10px;
+  }
+  .photo-grid{
+    margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+  }
+  .photo-tile{
+    background:var(--cream-deep); border:2px solid var(--cream-line); border-radius:20px;
+    padding:18px; display:flex; align-items:center; justify-content:center; aspect-ratio:1/1;
+  }
+  .photo-tile img{ width:100%; height:100%; object-fit:contain; }
+  .photo-tile:nth-child(1){ background:var(--green); border-color:var(--green-darker); }
+  @media (max-width:760px){
+    .photo-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+
+  /* -------- Presentaciones -------- */
+  .presentaciones{ background:var(--green); color:var(--cream); }
+  .presentaciones .eyebrow{ color:var(--gold); }
+  .presentaciones h2{ color:var(--cream); font-size:clamp(32px,5vw,52px); }
+  .presentaciones .lede{ color:#CFE4D6; }
+  .price-grid{ margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .price-card{
+    background:var(--cream); color:var(--ink); border-radius:22px; padding:30px 26px;
+    border:3px solid var(--green-darker); box-shadow:6px 6px 0 var(--green-darker);
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .price-card .name{ font-family:'Anton',sans-serif; font-size:24px; text-transform:uppercase; color:var(--green); }
+  .price-card .price{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:34px; color:var(--gold-dark); }
+  .price-card .price sup{ font-size:15px; }
+  .price-card p{ font-size:14.5px; color:var(--ink-soft); margin:0; }
+  @media (max-width:820px){ .price-grid{ grid-template-columns:1fr; } }
+  .presentaciones .cta-row{ margin-top:36px; text-align:center; }
+  .presentaciones .note{ margin-top:16px; text-align:center; font-size:13.5px; color:#BFDAC7; }
+
+  /* -------- Preparación -------- */
+  .prep .wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center; }
+  .prep-art img{ width:100%; max-width:420px; margin:0 auto; border-radius:24px; }
+  .prep h2{ font-size:clamp(32px,5vw,48px); color:var(--green); }
+  .steps{ margin-top:28px; display:flex; flex-direction:column; gap:18px; }
+  .step{ display:grid; grid-template-columns:44px 1fr; gap:14px; align-items:flex-start; }
+  .step .num{
+    width:44px; height:44px; border-radius:50%; background:var(--gold); border:3px solid var(--ink);
+    display:flex; align-items:center; justify-content:center; font-family:'Anton',sans-serif; font-size:19px;
+  }
+  .step h4{ font-family:'Anton',sans-serif; font-size:17px; text-transform:uppercase; margin:0 0 4px; color:var(--ink); }
+  .step p{ margin:0; color:var(--ink-soft); font-size:15px; }
+  .prep .tagline{ margin-top:20px; font-weight:800; font-style:italic; color:var(--gold-dark); }
+  .formula{
+    margin-top:22px; display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:600;
+    background:var(--cream-deep); border:2px dashed var(--gold-dark); border-radius:12px; padding:14px 18px; color:var(--ink);
+  }
+  .prep .fineprint{ margin-top:18px; font-size:14px; color:var(--ink-soft); }
+  .prep .fineprint strong{ color:var(--ink); }
+  @media (max-width:860px){ .prep .wrap{ grid-template-columns:1fr; } .prep-art{ order:-1; } }
+
+  /* -------- Rendimiento -------- */
+  .rendimiento{ background:var(--cream-deep); border-top:2px solid var(--cream-line); border-bottom:2px solid var(--cream-line); }
+  .rendimiento h2{ font-size:clamp(30px,5vw,44px); color:var(--green); text-align:center; }
+  .rendimiento .lede{ text-align:center; margin-left:auto; margin-right:auto; }
+  .table-wrap{ margin-top:40px; overflow-x:auto; border-radius:18px; border:3px solid var(--green); }
+  table{ width:100%; border-collapse:collapse; min-width:520px; background:var(--cream); }
+  th,td{ padding:16px 20px; text-align:left; font-size:15px; }
+  th{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em;
+    background:var(--green); color:var(--cream); font-weight:600;
+  }
+  td{ border-bottom:1px solid var(--cream-line); font-variant-numeric:tabular-nums; }
+  tr:last-child td{ border-bottom:none; }
+  td.rinde{ font-weight:800; color:var(--gold-dark); }
+
+  /* -------- Galería -------- */
+  .galeria h2{ font-size:clamp(32px,5vw,48px); color:var(--green); text-align:center; }
+  .galeria .lede{ text-align:center; margin-left:auto; margin-right:auto; }
+  .filmstrip{
+    margin-top:40px; display:flex; gap:18px; overflow-x:auto; padding-bottom:12px; scroll-snap-type:x mandatory;
+  }
+  .filmstrip img{
+    height:220px; width:220px; object-fit:contain; flex:0 0 auto; scroll-snap-align:start;
+    background:var(--cream-deep); border:2px solid var(--cream-line); border-radius:18px; padding:14px;
+  }
+
+  /* -------- Instagram -------- */
+  .instagram{ text-align:center; }
+  .instagram h2{ font-size:clamp(30px,5vw,44px); color:var(--green); }
+  .instagram .handle{
+    display:inline-block; margin-top:10px; font-family:'IBM Plex Mono',monospace; font-weight:600; color:var(--gold-dark);
+  }
+  .instagram .lede{ margin-left:auto; margin-right:auto; }
+  .instagram .cta-row{ margin-top:28px; }
+
+  /* -------- CTA final -------- */
+  .cta-final{ background:var(--green); color:var(--cream); text-align:center; }
+  .cta-final h2{ font-size:clamp(34px,6vw,58px); color:var(--cream); text-shadow:3px 3px 0 var(--green-darker); }
+  .cta-final .highlight{
+    margin-top:16px; font-family:'Nunito',sans-serif; font-weight:800; font-style:italic; font-size:20px; color:var(--gold);
+  }
+  .cta-final .cta-row{ margin-top:34px; justify-content:center; display:flex; }
+
+  /* -------- Footer -------- */
+  footer{ background:var(--green-darker); color:var(--cream); padding:44px 0; }
+  footer .wrap{ display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  footer img{ height:30px; opacity:0.9; }
+  footer .links{ display:flex; gap:22px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; }
+  footer .links a{ text-decoration:none; color:var(--cream); opacity:0.85; }
+  footer .links a:hover{ opacity:1; text-decoration:underline; }
+  footer .copy{ width:100%; margin-top:22px; font-size:11.5px; opacity:0.55; font-family:'IBM Plex Mono',monospace; }
+
+  @media (max-width:640px){ section{ padding:60px 0; } }
+
+  /* Ranchazo: fotografías, textura y preparación */
+  section[id]{scroll-margin-top:84px}
+  .quees,.rendimiento,.instagram{background-color:var(--cream);background-image:url('assets/textura-ranchazo.webp');background-position:center;background-size:cover}
+  .quees .wrap{max-width:940px}
+  .quees h2{line-height:1.2}
+  .con-todo{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:5px;text-underline-offset:9px}
+  .photo-hint{font-size:13px;color:var(--ink-soft);margin:24px 0 -20px}
+  button.photo-tile{position:relative;overflow:hidden;cursor:pointer;width:100%;font:inherit;isolation:isolate}
+  .photo-tile .food-cutout{transition:opacity .35s,transform .45s}
+  .photo-tile .food-scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s,transform .6s;transform:scale(1.035)}
+  .tile-label{position:absolute;bottom:14px;left:14px;background:var(--cream);color:var(--green);padding:4px 12px;border-radius:20px;font-weight:800;font-size:13px;z-index:2}
+  .photo-tile.is-active .food-scene{opacity:1;transform:scale(1)}
+  .photo-tile.is-active .food-cutout{opacity:0}
+  @media(hover:hover){.photo-tile:hover .food-scene{opacity:1;transform:scale(1)}.photo-tile:hover .food-cutout{opacity:0}}
+  .photo-tile:focus-visible{outline:4px solid var(--gold);outline-offset:4px}
+  .packshot{height:280px;background:white;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:12px;margin-bottom:12px}
+  .packshot img{width:100%;height:100%;object-fit:contain}
+  .step h3{font-family:'Anton',sans-serif;font-size:29px;margin:0 0 8px;color:var(--green);line-height:1.1}
+  .steps{gap:25px}.step{align-items:start}.step .num{margin-top:2px}
+  .prep .wrap{grid-template-columns:1fr 1fr;align-items:start;gap:48px}
+  .prep-art>img{max-width:440px}
+  .equivalencias{margin:25px auto 0;max-width:440px;background:var(--cream-deep);padding:22px;border:2px solid var(--cream-line);border-radius:18px}
+  .equivalencias h3{font-size:25px;color:var(--green);margin-bottom:15px}
+  .equivalencias table{min-width:0;background:transparent}
+  .equivalencias caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .equivalencias tbody th{background:transparent;color:var(--green);font-size:16px;border-bottom:1px solid var(--cream-line)}
+  .equivalencias th,.equivalencias td{padding:10px 14px}.equivalencias td{font-weight:800}
+  .editorial-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
+  .editorial-grid figure{margin:0;min-width:0}.editorial-wide{grid-column:1/-1}
+  .editorial-grid img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:20px}
+  .editorial-wide img{aspect-ratio:3/2;object-position:center}
+  .editorial-grid figcaption{font-weight:800;color:var(--green);font-size:18px;margin-top:12px}
+  .contact-number{font-family:'IBM Plex Mono',monospace;font-size:24px;margin:24px 0 0}.contact-number a{text-decoration:none}
+  @media(max-width:860px){.prep .wrap{grid-template-columns:1fr}.prep-art{order:initial}}
+  @media(max-width:640px){.editorial-grid{grid-template-columns:1fr}.editorial-wide{grid-column:auto}.editorial-wide img{aspect-ratio:3/2}.photo-grid{gap:12px}.photo-tile{padding:10px}.tile-label{left:8px;bottom:8px;font-size:11px;padding:3px 8px}.packshot{height:290px}.con-todo{text-underline-offset:6px}.table-wrap table{min-width:0}.table-wrap th,.table-wrap td{padding:12px 9px;font-size:12px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo-tile img{transition:none!important}}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="assets/logo.png" alt="Ranchazo"></a>
+    <nav>
+      <div class="nav-links">
+        <a href="#producto">Producto</a>
+        <a href="#preparacion">Preparación</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <a class="btn btn-gold" href="https://wa.me/523333880016?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20de%20Ranchazo" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1>Échale<br>Ranchazo</h1>
+        <p class="sub">Dip / Aderezo para ponerle sabor a todo.</p>
+        <p class="lede">Prepara un ranch cremoso, fresco y lleno de sabor en minutos. Perfecto para alitas, pizza, hamburguesas, papas, ensaladas, verduras y mucho más.</p>
+        <p class="steps-line">Agrega crema ácida · Mezcla · Disfruta</p>
+        <div class="cta-row">
+          <a class="btn btn-green" href="#producto">Quiero mi Ranchazo</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-badge">100%<br>SABOR<br>RANCH</div>
+        <img src="assets/pizza.webp" alt="Rebanada de pizza bañada en Ranchazo">
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ ES RANCHAZO -->
+  <section class="quees">
+    <div class="wrap">
+      <span class="eyebrow">Qué es Ranchazo</span>
+      <h2>¡Un ranch que va <span class="con-todo">con todo</span>!</h2>
+      <p><strong>Ranchazo es una mezcla de especias</strong> para preparar un dip o aderezo tipo ranch de forma rápida y sencilla.</p>
+      <p>Solo necesitas agregar crema ácida, mezclar y disfrutar.</p>
+      <p>Úsalo para acompañar, dipear, bañar o darle ese toque extra a tus comidas favoritas.</p>
+    </div>
+  </section>
+
+  <!-- ANTOJO / GALERÍA PRINCIPAL -->
+  <section class="antojo" id="antojos">
+    <div class="wrap">
+      <span class="eyebrow">Todo sabe mejor con Ranchazo</span>
+      <h2>Alitas, pizza, hamburguesas,<br>papas, ensaladas, verduras…</h2>
+      <p class="highlight">Si se puede dipear, se puede Ranchazear.</p>
+
+      <p class="photo-hint">Pasa el cursor o toca una foto y descubre el antojo en su ambiente.</p><div class="photo-grid"><button class="photo-tile" type="button" aria-label="Ver ambiente: Hamburguesa" aria-pressed="false">
+ <img class="food-cutout" src="assets/hamburguesa.webp" alt="Hamburguesa con Ranchazo" loading="lazy" width="1024" height="1024">
+ <img class="food-scene" src="assets/ambiente-hamburguesa.webp" alt="" loading="lazy" aria-hidden="true">
+ <span class="tile-label">Hamburguesa</span></button>
+<button class="photo-tile" type="button" aria-label="Ver ambiente: Alitas" aria-pressed="false">
+ <img class="food-cutout" src="assets/alita.webp" alt="Alitas con Ranchazo" loading="lazy" width="1024" height="1024">
+ <img class="food-scene" src="assets/ambiente-alita.webp" alt="" loading="lazy" aria-hidden="true">
+ <span class="tile-label">Alitas</span></button>
+<button class="photo-tile" type="button" aria-label="Ver ambiente: Papas" aria-pressed="false">
+ <img class="food-cutout" src="assets/papas.webp" alt="Papas con Ranchazo" loading="lazy" width="1024" height="1024">
+ <img class="food-scene" src="assets/ambiente-papas.webp" alt="" loading="lazy" aria-hidden="true">
+ <span class="tile-label">Papas</span></button>
+<button class="photo-tile" type="button" aria-label="Ver ambiente: Ensalada" aria-pressed="false">
+ <img class="food-cutout" src="assets/ensalada.webp" alt="Ensalada con Ranchazo" loading="lazy" width="1024" height="1024">
+ <img class="food-scene" src="assets/ambiente-ensalada.webp" alt="" loading="lazy" aria-hidden="true">
+ <span class="tile-label">Ensalada</span></button>
+<button class="photo-tile" type="button" aria-label="Ver ambiente: Verduras" aria-pressed="false">
+ <img class="food-cutout" src="assets/verduras.webp" alt="Verduras con Ranchazo" loading="lazy" width="1024" height="1024">
+ <img class="food-scene" src="assets/ambiente-verduras.webp" alt="" loading="lazy" aria-hidden="true">
+ <span class="tile-label">Verduras</span></button>
+<button class="photo-tile" type="button" aria-label="Ver ambiente: Pizza" aria-pressed="false">
+ <img class="food-cutout" src="assets/pizza.webp" alt="Pizza con Ranchazo" loading="lazy" width="1024" height="1024">
+ <img class="food-scene" src="assets/ambiente-pizza.webp" alt="" loading="lazy" aria-hidden="true">
+ <span class="tile-label">Pizza</span></button></div></div></section>
+
+  <!-- PRESENTACIONES -->
+  <section class="presentaciones" id="producto">
+    <div class="wrap">
+      <span class="eyebrow">Presentaciones</span>
+      <h2>Ranchazo para cada antojo</h2>
+      <p class="lede">Tres presentaciones a la venta. El sobre de 17 g no se vende suelto — solo viene dentro de la tira de 12.</p>
+
+      <div class="price-grid">
+        <div class="price-card">
+          <div class="packshot"><img src="assets/ranchazo-tira.webp" alt="Tira de 12 sobres de Ranchazo" loading="lazy"></div><span class="name">Tira de 12 sobres</span>
+          <span class="price">$240</span>
+          <p>12 sobres de 17 g, listos para compartir, regalar o vender por pieza.</p>
+        </div>
+        <div class="price-card">
+          <div class="packshot"><img src="assets/ranchazo-250gr.webp" alt="Bote 250 g de Ranchazo" loading="lazy"></div><span class="name">Bote 250 g</span>
+          <span class="price">$275</span>
+          <p>Para los que ya saben que un poco de Ranchazo nunca es suficiente.</p>
+        </div>
+        <div class="price-card">
+          <div class="packshot"><img src="assets/ranchazo-500gr-limpio.webp" alt="Bote 500 g de Ranchazo" loading="lazy"></div><span class="name">Bote 500 g</span>
+          <span class="price">$500</span>
+          <p>Más Ranchazo para más comidas, reuniones o preparaciones.</p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://wa.me/523333880016?text=Hola%2C%20quiero%20preguntar%20por%20disponibilidad%20de%20Ranchazo" target="_blank" rel="noopener">Pregunta por disponibilidad en WhatsApp</a>
+      </div>
+      <p class="note">Precios en pesos mexicanos (MXN). Disponibilidad sujeta a existencias.</p>
+    </div>
+  </section>
+
+  <!-- PREPARACIÓN -->
+  <section class="prep" id="preparacion">
+    <div class="wrap">
+      <div class="prep-copy">
+        <span class="eyebrow">Preparación</span>
+        <h2>Ranchazo en 3 pasos</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="num">1</span>
+            <div><h3>Vacía</h3><p>Agrega la cantidad indicada de Ranchazo.</p></div>
+          </div>
+          <div class="step">
+            <span class="num">2</span>
+            <div><h3>Mezcla</h3><p>Combínalo con crema ácida hasta obtener una mezcla uniforme.</p></div>
+          </div>
+          <div class="step">
+            <span class="num">3</span>
+            <div><h3>Disfruta</h3><p>Sirve como dip o aderezo y refrigera después de preparar.</p></div>
+          </div>
+        </div>
+        <p class="tagline">Así de fácil.</p>
+        <div class="formula">1 sobre de Ranchazo + 2 tazas de crema ácida (≈500 ml) = listo para disfrutar.</div>
+        <p class="fineprint"><strong>Tip:</strong> para espesar y realzar el sabor, refrigera 1 hora antes de servir. Una vez preparado, mantén refrigerado.<br><strong>Ingredientes:</strong> sal, pimienta y especias.</p>
+      </div>
+      <div class="prep-art">
+        <img src="assets/preparacion-blanca-final.webp" alt="Sobre blanco de Ranchazo vertiendo especias en un tazón con crema ácida"><div class="equivalencias"><h3>La medida de tu antojo</h3><table><caption>Equivalencias de preparación</caption><thead><tr><th scope="col">Ranchazo</th><th scope="col">Hace</th></tr></thead><tbody><tr><th scope="row">34 g</th><td>1 litro</td></tr><tr><th scope="row">68 g</th><td>2 litros</td></tr><tr><th scope="row">125 g</th><td>3.5 litros</td></tr><tr><th scope="row">500 g</th><td>14 litros</td></tr></tbody></table></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RENDIMIENTO -->
+  <section class="rendimiento">
+    <div class="wrap">
+      <span class="eyebrow" style="display:block;text-align:center;">Rendimiento</span>
+      <h2>¿Cuánto Ranchazo quieres preparar?</h2>
+      <p class="lede">Desde una botanita hasta una reunión completa. Consulta cuánto dip puedes preparar con cada presentación.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Presentación</th><th>Ranchazo</th><th>Dip preparado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tira de 12 sobres</td><td>204 g</td><td class="rinde">6 L</td></tr>
+            <tr><td>Bote 250 g</td><td>250 g</td><td class="rinde">7 L</td></tr>
+            <tr><td>Bote 500 g</td><td>500 g</td><td class="rinde">14 L</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA (filmstrip) -->
+  <section class="galeria" id="galeria">
+    <div class="wrap">
+      <span class="eyebrow" style="display:block;text-align:center;">Galería</span>
+      <h2>Ranchazo en acción</h2>
+      <p class="lede">Para dipear, acompañar, compartir o echarle directo a tu comida favorita. Descubre todas las formas de darle un Ranchazo a tu antojo.</p>
+      <div class="editorial-grid">
+ <figure class="editorial-wide"><img src="assets/editorial-reunion.webp" alt="Amigos en el patio, sirviendo ranch preparado sobre una hamburguesa" loading="lazy"><figcaption>El invitado que va con todos.</figcaption></figure>
+ <figure><img src="assets/editorial-ensalada.webp" alt="Una mujer agrega ranch preparado a su ensalada" loading="lazy"><figcaption>Tu ensalada, con un Ranchazo.</figcaption></figure>
+ <figure><img src="assets/editorial-papas.webp" alt="Amigos compartiendo papas y dip ranch en una mesa" loading="lazy"><figcaption>Una papa. Otro dip. Y así.</figcaption></figure>
+ </div><div class="filmstrip" aria-label="Más antojos con Ranchazo">
+ <img src="assets/pizza.webp" alt="Pizza con Ranchazo" loading="lazy">
+ <img src="assets/hamburguesa.webp" alt="Hamburguesa con Ranchazo" loading="lazy">
+ <img src="assets/alita.webp" alt="Alitas con Ranchazo" loading="lazy">
+ <img src="assets/papas.webp" alt="Papas con Ranchazo" loading="lazy">
+ <img src="assets/ensalada.webp" alt="Ensalada con Ranchazo" loading="lazy">
+ <img src="assets/verduras.webp" alt="Verduras con Ranchazo" loading="lazy">
+ </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="instagram">
+    <div class="wrap">
+      <span class="eyebrow">Instagram</span>
+      <h2>Síguenos el antojo</h2>
+      <p class="lede">Mira recetas, ideas, combinaciones y nuevas formas de disfrutar Ranchazo directamente desde nuestro Instagram.</p>
+      <p class="handle">@ranchazo_</p>
+      <div class="cta-row">
+        <a class="btn btn-outline" href="https://instagram.com/ranchazo_" target="_blank" rel="noopener">Síguenos en Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final" id="contacto">
+    <div class="wrap">
+      <h2>¿Ya se te antojó<br>un Ranchazo?</h2>
+      <p class="lede" style="color:#CFE4D6; margin-left:auto; margin-right:auto;">Pregunta por nuestras presentaciones, disponibilidad y pedidos directamente por WhatsApp.</p>
+      <p class="contact-number"><a href="https://wa.me/523333880016" target="_blank" rel="noopener">33 3888 0016</a></p><p class="highlight">Tú dinos cuánto quieres. Nosotros ponemos el Ranchazo.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="https://wa.me/523333880016?text=Hola%2C%20quiero%20pedir%20Ranchazo" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Ranchazo">
+    <div class="links">
+      <a href="https://wa.me/523333880016" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://instagram.com/ranchazo_" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="copy">© Ranchazo — Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.photo-tile').forEach(tile=>{
+ tile.addEventListener('click',()=>{const active=tile.classList.toggle('is-active');tile.setAttribute('aria-pressed',String(active));});
+});
+</script>
+</body>
+</html>
