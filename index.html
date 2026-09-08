@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ranchazo — Dip / Aderezo tipo Ranch</title>
-<meta name="description" content="Ranchazo: mezcla de especias para preparar tu propio dip o aderezo tipo ranch. Solo agrega crema ácida. Disponible en tira de 12 sobres, 250 g y 500 g.">
+<meta name="description" content="Ranchazo: mezcla de especias para preparar tu propio dip o aderezo tipo ranch. Solo agrega crema ácida. Bolsa individual de 17 g a $30 MXN; tira de 12 sobres y botes de 250 g y 500 g para negocios.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rye&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -282,6 +282,26 @@
   @media(max-width:640px){.editorial-grid{grid-template-columns:1fr}.editorial-wide{grid-column:auto}.editorial-wide img{aspect-ratio:3/2}.photo-grid{gap:12px}.photo-tile{padding:10px}.tile-label{left:8px;bottom:8px;font-size:11px;padding:3px 8px}.packshot{height:290px}.con-todo{text-underline-offset:6px}.table-wrap table{min-width:0}.table-wrap th,.table-wrap td{padding:12px 9px;font-size:12px}}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo-tile img{transition:none!important}}
 
+
+  .hero-art{isolation:isolate}
+  .hero-badge{z-index:2;width:132px;height:132px;font-family:'Anton',sans-serif;font-size:23px;line-height:1.12;transform:rotate(6deg);right:0;top:0;letter-spacing:.025em}
+  .price-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+  .price-card{padding:24px 18px;min-width:0}
+  .price-card .name{font-size:23px;min-height:56px;line-height:1.18}
+  .packshot{height:235px;margin-bottom:8px}
+  .audience{display:block;font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:.035em;color:var(--green);background:var(--cream-deep);border-radius:20px;padding:7px 10px;text-align:center}
+  .audience.individual{background:var(--gold);color:var(--ink)}
+  .individual-card{border-color:var(--gold);box-shadow:6px 6px 0 var(--green-darker)}
+  .individual-card .price{color:var(--green);font-size:42px;line-height:1.3}
+  .price-card .price-context{font-weight:800;color:var(--green);font-size:13px}
+  @media(max-width:1050px){.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.packshot{height:280px}}
+  @media(max-width:560px){.price-grid{grid-template-columns:1fr}.price-card{padding:24px}.price-card .name{min-height:0}.hero-badge{width:116px;height:116px;font-size:21px}.packshot{height:290px}}
+
+  .photo-tile:nth-child(3),.photo-tile:nth-child(5){background:var(--green);border-color:var(--green-darker)}
+  .business-subtitle{grid-column:2/-1;font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;text-transform:none;line-height:1.4;color:var(--cream);margin:0;text-align:center}
+  .price-grid>.price-card{grid-row:2}
+  .packshot-small img{width:90%;height:90%}
+  @media(max-width:1050px){.price-grid>.price-card{grid-row:auto;order:3}.price-grid>.individual-card{order:1}.business-subtitle{grid-column:1/-1;order:2;text-align:left}}
 </style>
 </head>
 <body>
@@ -370,25 +390,34 @@
     <div class="wrap">
       <span class="eyebrow">Presentaciones</span>
       <h2>Ranchazo para cada antojo</h2>
-      <p class="lede">Tres presentaciones a la venta. El sobre de 17 g no se vende suelto — solo viene dentro de la tira de 12.</p>
+      <p class="lede">Para tu antojo o para tu negocio. Bolsa individual de 17 g a $30; tira y botes con precios para restaurantes, comercios y tiendas.</p>
 
       <div class="price-grid">
-        <div class="price-card">
+<h3 class="business-subtitle">Para Negocios, Restaurantes, tiendas.</h3>
+<div class="price-card individual-card">
+          <span class="audience individual">Venta individual</span>
+          <div class="packshot"><img src="assets/bolsa-17g.png" alt="Bolsa individual de Ranchazo de 17 g" loading="lazy"></div>
+          <span class="name">Bolsa de 17 g</span>
+          <span class="price">$30</span>
+          <p class="price-context">Precio por bolsa individual</p>
+          <p>Un Ranchazo para disfrutar en casa. Pide tu bolsa por WhatsApp.</p>
+        </div>
+<div class="price-card">
           <div class="packshot"><img src="assets/ranchazo-tira.webp" alt="Tira de 12 sobres de Ranchazo" loading="lazy"></div><span class="name">Tira de 12 sobres</span>
           <span class="price">$240</span>
-          <p>12 sobres de 17 g, listos para compartir, regalar o vender por pieza.</p>
+          <p>12 sobres de 17 g para tiendas, comercios y reventa por pieza.</p>
         </div>
-        <div class="price-card">
-          <div class="packshot"><img src="assets/ranchazo-250gr.webp" alt="Bote 250 g de Ranchazo" loading="lazy"></div><span class="name">Bote 250 g</span>
-          <span class="price">$275</span>
-          <p>Para los que ya saben que un poco de Ranchazo nunca es suficiente.</p>
-        </div>
-        <div class="price-card">
+<div class="price-card">
           <div class="packshot"><img src="assets/ranchazo-500gr-limpio.webp" alt="Bote 500 g de Ranchazo" loading="lazy"></div><span class="name">Bote 500 g</span>
           <span class="price">$500</span>
-          <p>Más Ranchazo para más comidas, reuniones o preparaciones.</p>
+          <p>Precio para restaurantes, comercios y tiendas. Más Ranchazo para las preparaciones de tu negocio.</p>
         </div>
-      </div>
+<div class="price-card">
+          <div class="packshot packshot-small"><img src="assets/ranchazo-250gr.webp" alt="Bote 250 g de Ranchazo" loading="lazy"></div><span class="name">Bote 250 g</span>
+          <span class="price">$275</span>
+          <p>Precio para restaurantes, comercios y tiendas. Práctico para preparar porciones a tu medida.</p>
+        </div>
+</div>
 
       <div class="cta-row">
         <a class="btn btn-gold" href="https://wa.me/523333880016?text=Hola%2C%20quiero%20preguntar%20por%20disponibilidad%20de%20Ranchazo" target="_blank" rel="noopener">Pregunta por disponibilidad en WhatsApp</a>
