@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranchazo para tu negocio — Presentaciones y rendimiento</title>
+<meta name="description" content="Ranchazo para tiendas, distribuidores y restaurantes. Conoce precios para negocio, rendimiento y ventas potenciales. Cotiza por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rye&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0F6734;
+    --green-dark:#0A4A25;
+    --green-darker:#082F19;
+    --gold:#F39019;
+    --gold-dark:#B77D00;
+    --cream:#F5EDD9;
+    --cream-deep:#EADFC0;
+    --cream-line:#DCCB9E;
+    --ink:#1C1B12;
+    --ink-soft:#4A4630;
+    --shadow: 0 6px 0 rgba(15,103,52,0.12);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Nunito', system-ui, sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{ max-width:100%; display:block; }
+  h1,h2,h3{
+    font-family:'Anton', system-ui, sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:1.02;
+    margin:0;
+  }
+  a{ color:inherit; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px; }
+  section{ padding:88px 0; position:relative; }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+    display:inline-block;
+    margin-bottom:14px;
+  }
+  .lede{ font-size:18px; color:var(--ink-soft); max-width:56ch; margin-top:16px; }
+
+  /* -------- Buttons -------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'Nunito',sans-serif; font-weight:800; font-size:16px;
+    padding:16px 30px; border-radius:999px; text-decoration:none;
+    border:3px solid var(--ink); box-shadow:4px 4px 0 var(--ink);
+    transition:transform .12s ease, box-shadow .12s ease;
+    white-space:normal; max-width:100%; text-align:center; justify-content:center;
+  }
+  .btn:hover{ transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--ink); }
+  .btn:active{ transform:translate(1px,1px); box-shadow:2px 2px 0 var(--ink); }
+  .btn-gold{ background:var(--gold); color:var(--ink); }
+  .btn-green{ background:var(--green); color:var(--cream); border-color:var(--green-darker); box-shadow:4px 4px 0 var(--green-darker); }
+  .btn-green:hover{ box-shadow:6px 6px 0 var(--green-darker); }
+  .btn-outline{ background:transparent; color:var(--ink); }
+
+  /* -------- Header -------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--green);
+    border-bottom:4px solid var(--green-darker);
+  }
+  header .wrap{ display:flex; align-items:center; justify-content:space-between; gap:20px; padding-top:12px; padding-bottom:12px; }
+  header .logo img{ height:40px; width:auto; }
+  nav{ display:flex; align-items:center; gap:28px; }
+  nav a{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:600;
+    letter-spacing:0.08em; text-transform:uppercase; color:var(--cream);
+    text-decoration:none; opacity:0.88;
+  }
+  nav a:hover{ opacity:1; text-decoration:underline; text-underline-offset:4px; }
+  .nav-links{ display:flex; gap:26px; }
+  header .btn{ padding:10px 20px; font-size:13.5px; }
+  @media (max-width:760px){ .nav-links{ display:none; } }
+
+  /* -------- Hero -------- */
+  .hero{ padding-top:64px; padding-bottom:0; overflow:visible; }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.05fr 0.95fr; align-items:center; gap:40px;
+  }
+  .hero h1{ font-size:clamp(46px,7vw,84px); color:var(--green); text-shadow:3px 3px 0 var(--gold); }
+  .hero .sub{
+    font-family:'Nunito',sans-serif; font-style:italic; font-weight:800; font-size:clamp(18px,2.4vw,24px);
+    color:var(--gold-dark); margin-top:14px;
+  }
+  .hero p.lede{ margin-top:20px; }
+  .hero .steps-line{
+    margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;
+    letter-spacing:0.06em; text-transform:uppercase; color:var(--green-dark);
+  }
+  .hero .cta-row{ margin-top:32px; display:flex; gap:16px; flex-wrap:wrap; }
+  .hero-art{ position:relative; }
+  .hero-art img{
+    width:100%; max-width:480px; margin:0 auto; filter:drop-shadow(0 20px 24px rgba(28,27,18,0.25));
+  }
+  .hero-badge{
+    position:absolute; top:-6px; right:6px;
+    background:var(--gold); color:var(--ink); border:3px solid var(--ink);
+    border-radius:50%; width:112px; height:112px; display:flex; align-items:center; justify-content:center;
+    text-align:center; font-family:'Rye',serif; font-size:12px; line-height:1.35; transform:rotate(8deg);
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  @media (max-width:860px){
+    .hero .wrap{ grid-template-columns:1fr; text-align:center; }
+    .hero p.lede{ margin-left:auto; margin-right:auto; }
+    .hero .cta-row{ justify-content:center; }
+    .hero-art img{ max-width:340px; }
+  }
+
+  /* -------- Qué es -------- */
+  .quees{ background:var(--cream-deep); border-top:2px solid var(--cream-line); border-bottom:2px solid var(--cream-line); }
+  .quees .wrap{ max-width:760px; text-align:center; }
+  .quees h2{ font-size:clamp(32px,5vw,48px); color:var(--green); }
+  .quees p{ font-size:18px; margin-top:18px; color:var(--ink-soft); }
+  .quees p strong{ color:var(--ink); }
+
+  /* -------- Antojo -------- */
+  .antojo h2{ font-size:clamp(32px,5vw,52px); color:var(--green); }
+  .antojo .highlight{
+    font-family:'Nunito',sans-serif; font-style:italic; font-weight:800; font-size:22px;
+    color:var(--gold-dark); margin-top:10px;
+  }
+  .photo-grid{
+    margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+  }
+  .photo-tile{
+    background:var(--cream-deep); border:2px solid var(--cream-line); border-radius:20px;
+    padding:18px; display:flex; align-items:center; justify-content:center; aspect-ratio:1/1;
+  }
+  .photo-tile img{ width:100%; height:100%; object-fit:contain; }
+  .photo-tile:nth-child(1){ background:var(--green); border-color:var(--green-darker); }
+  @media (max-width:760px){
+    .photo-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+
+  /* -------- Presentaciones -------- */
+  .presentaciones{ background:var(--green); color:var(--cream); }
+  .presentaciones .eyebrow{ color:var(--gold); }
+  .presentaciones h2{ color:var(--cream); font-size:clamp(32px,5vw,52px); }
+  .presentaciones .lede{ color:#CFE4D6; }
+  .price-grid{ margin-top:44px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .price-card{
+    background:var(--cream); color:var(--ink); border-radius:22px; padding:30px 26px;
+    border:3px solid var(--green-darker); box-shadow:6px 6px 0 var(--green-darker);
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .price-card .name{ font-family:'Anton',sans-serif; font-size:24px; text-transform:uppercase; color:var(--green); }
+  .price-card .price{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:34px; color:var(--gold-dark); }
+  .price-card .price sup{ font-size:15px; }
+  .price-card p{ font-size:14.5px; color:var(--ink-soft); margin:0; }
+  @media (max-width:820px){ .price-grid{ grid-template-columns:1fr; } }
+  .presentaciones .cta-row{ margin-top:36px; text-align:center; }
+  .presentaciones .note{ margin-top:16px; text-align:center; font-size:13.5px; color:#BFDAC7; }
+
+  /* -------- Preparación -------- */
+  .prep .wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center; }
+  .prep-art img{ width:100%; max-width:420px; margin:0 auto; border-radius:24px; }
+  .prep h2{ font-size:clamp(32px,5vw,48px); color:var(--green); }
+  .steps{ margin-top:28px; display:flex; flex-direction:column; gap:18px; }
+  .step{ display:grid; grid-template-columns:44px 1fr; gap:14px; align-items:flex-start; }
+  .step .num{
+    width:44px; height:44px; border-radius:50%; background:var(--gold); border:3px solid var(--ink);
+    display:flex; align-items:center; justify-content:center; font-family:'Anton',sans-serif; font-size:19px;
+  }
+  .step h4{ font-family:'Anton',sans-serif; font-size:17px; text-transform:uppercase; margin:0 0 4px; color:var(--ink); }
+  .step p{ margin:0; color:var(--ink-soft); font-size:15px; }
+  .prep .tagline{ margin-top:20px; font-weight:800; font-style:italic; color:var(--gold-dark); }
+  .formula{
+    margin-top:22px; display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:600;
+    background:var(--cream-deep); border:2px dashed var(--gold-dark); border-radius:12px; padding:14px 18px; color:var(--ink);
+  }
+  .prep .fineprint{ margin-top:18px; font-size:14px; color:var(--ink-soft); }
+  .prep .fineprint strong{ color:var(--ink); }
+  @media (max-width:860px){ .prep .wrap{ grid-template-columns:1fr; } .prep-art{ order:-1; } }
+
+  /* -------- Rendimiento -------- */
+  .rendimiento{ background:var(--cream-deep); border-top:2px solid var(--cream-line); border-bottom:2px solid var(--cream-line); }
+  .rendimiento h2{ font-size:clamp(30px,5vw,44px); color:var(--green); text-align:center; }
+  .rendimiento .lede{ text-align:center; margin-left:auto; margin-right:auto; }
+  .table-wrap{ margin-top:40px; overflow-x:auto; border-radius:18px; border:3px solid var(--green); }
+  table{ width:100%; border-collapse:collapse; min-width:520px; background:var(--cream); }
+  th,td{ padding:16px 20px; text-align:left; font-size:15px; }
+  th{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em;
+    background:var(--green); color:var(--cream); font-weight:600;
+  }
+  td{ border-bottom:1px solid var(--cream-line); font-variant-numeric:tabular-nums; }
+  tr:last-child td{ border-bottom:none; }
+  td.rinde{ font-weight:800; color:var(--gold-dark); }
+
+  /* -------- Galería -------- */
+  .galeria h2{ font-size:clamp(32px,5vw,48px); color:var(--green); text-align:center; }
+  .galeria .lede{ text-align:center; margin-left:auto; margin-right:auto; }
+  .filmstrip{
+    margin-top:40px; display:flex; gap:18px; overflow-x:auto; padding-bottom:12px; scroll-snap-type:x mandatory;
+  }
+  .filmstrip img{
+    height:220px; width:220px; object-fit:contain; flex:0 0 auto; scroll-snap-align:start;
+    background:var(--cream-deep); border:2px solid var(--cream-line); border-radius:18px; padding:14px;
+  }
+
+  /* -------- Instagram -------- */
+  .instagram{ text-align:center; }
+  .instagram h2{ font-size:clamp(30px,5vw,44px); color:var(--green); }
+  .instagram .handle{
+    display:inline-block; margin-top:10px; font-family:'IBM Plex Mono',monospace; font-weight:600; color:var(--gold-dark);
+  }
+  .instagram .lede{ margin-left:auto; margin-right:auto; }
+  .instagram .cta-row{ margin-top:28px; }
+
+  /* -------- CTA final -------- */
+  .cta-final{ background:var(--green); color:var(--cream); text-align:center; }
+  .cta-final h2{ font-size:clamp(34px,6vw,58px); color:var(--cream); text-shadow:3px 3px 0 var(--green-darker); }
+  .cta-final .highlight{
+    margin-top:16px; font-family:'Nunito',sans-serif; font-weight:800; font-style:italic; font-size:20px; color:var(--gold);
+  }
+  .cta-final .cta-row{ margin-top:34px; justify-content:center; display:flex; }
+
+  /* -------- Footer -------- */
+  footer{ background:var(--green-darker); color:var(--cream); padding:44px 0; }
+  footer .wrap{ display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  footer img{ height:30px; opacity:0.9; }
+  footer .links{ display:flex; gap:22px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; }
+  footer .links a{ text-decoration:none; color:var(--cream); opacity:0.85; }
+  footer .links a:hover{ opacity:1; text-decoration:underline; }
+  footer .copy{ width:100%; margin-top:22px; font-size:11.5px; opacity:0.55; font-family:'IBM Plex Mono',monospace; }
+
+  @media (max-width:640px){ section{ padding:60px 0; } }
+
+  /* Ranchazo: fotografías, textura y preparación */
+  section[id]{scroll-margin-top:84px}
+  .quees,.rendimiento,.instagram{background-color:var(--cream);background-image:url('assets/textura-ranchazo.webp');background-position:center;background-size:cover}
+  .quees .wrap{max-width:940px}
+  .quees h2{line-height:1.2}
+  .con-todo{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:5px;text-underline-offset:9px}
+  .photo-hint{font-size:13px;color:var(--ink-soft);margin:24px 0 -20px}
+  button.photo-tile{position:relative;overflow:hidden;cursor:pointer;width:100%;font:inherit;isolation:isolate}
+  .photo-tile .food-cutout{transition:opacity .35s,transform .45s}
+  .photo-tile .food-scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s,transform .6s;transform:scale(1.035)}
+  .tile-label{position:absolute;bottom:14px;left:14px;background:var(--cream);color:var(--green);padding:4px 12px;border-radius:20px;font-weight:800;font-size:13px;z-index:2}
+  .photo-tile.is-active .food-scene{opacity:1;transform:scale(1)}
+  .photo-tile.is-active .food-cutout{opacity:0}
+  @media(hover:hover){.photo-tile:hover .food-scene{opacity:1;transform:scale(1)}.photo-tile:hover .food-cutout{opacity:0}}
+  .photo-tile:focus-visible{outline:4px solid var(--gold);outline-offset:4px}
+  .packshot{height:280px;background:white;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:12px;margin-bottom:12px}
+  .packshot img{width:100%;height:100%;object-fit:contain}
+  .step h3{font-family:'Anton',sans-serif;font-size:29px;margin:0 0 8px;color:var(--green);line-height:1.1}
+  .steps{gap:25px}.step{align-items:start}.step .num{margin-top:2px}
+  .prep .wrap{grid-template-columns:1fr 1fr;align-items:start;gap:48px}
+  .prep-art>img{max-width:440px}
+  .equivalencias{margin:25px auto 0;max-width:440px;background:var(--cream-deep);padding:22px;border:2px solid var(--cream-line);border-radius:18px}
+  .equivalencias h3{font-size:25px;color:var(--green);margin-bottom:15px}
+  .equivalencias table{min-width:0;background:transparent}
+  .equivalencias caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .equivalencias tbody th{background:transparent;color:var(--green);font-size:16px;border-bottom:1px solid var(--cream-line)}
+  .equivalencias th,.equivalencias td{padding:10px 14px}.equivalencias td{font-weight:800}
+  .editorial-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
+  .editorial-grid figure{margin:0;min-width:0}.editorial-wide{grid-column:1/-1}
+  .editorial-grid img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:20px}
+  .editorial-wide img{aspect-ratio:3/2;object-position:center}
+  .editorial-grid figcaption{font-weight:800;color:var(--green);font-size:18px;margin-top:12px}
+  .contact-number{font-family:'IBM Plex Mono',monospace;font-size:24px;margin:24px 0 0}.contact-number a{text-decoration:none}
+  @media(max-width:860px){.prep .wrap{grid-template-columns:1fr}.prep-art{order:initial}}
+  @media(max-width:640px){.editorial-grid{grid-template-columns:1fr}.editorial-wide{grid-column:auto}.editorial-wide img{aspect-ratio:3/2}.photo-grid{gap:12px}.photo-tile{padding:10px}.tile-label{left:8px;bottom:8px;font-size:11px;padding:3px 8px}.packshot{height:290px}.con-todo{text-underline-offset:6px}.table-wrap table{min-width:0}.table-wrap th,.table-wrap td{padding:12px 9px;font-size:12px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo-tile img{transition:none!important}}
+
+
+  .hero-art{isolation:isolate}
+  .hero-badge{z-index:2;width:132px;height:132px;font-family:'Anton',sans-serif;font-size:23px;line-height:1.12;transform:rotate(6deg);right:0;top:0;letter-spacing:.025em}
+  .price-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+  .price-card{padding:24px 18px;min-width:0}
+  .price-card .name{font-size:23px;min-height:56px;line-height:1.18}
+  .packshot{height:235px;margin-bottom:8px}
+  .audience{display:block;font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:.035em;color:var(--green);background:var(--cream-deep);border-radius:20px;padding:7px 10px;text-align:center}
+  .audience.individual{background:var(--gold);color:var(--ink)}
+  .individual-card{border-color:var(--gold);box-shadow:6px 6px 0 var(--green-darker)}
+  .individual-card .price{color:var(--green);font-size:42px;line-height:1.3}
+  .price-card .price-context{font-weight:800;color:var(--green);font-size:13px}
+  @media(max-width:1050px){.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.packshot{height:280px}}
+  @media(max-width:560px){.price-grid{grid-template-columns:1fr}.price-card{padding:24px}.price-card .name{min-height:0}.hero-badge{width:116px;height:116px;font-size:21px}.packshot{height:290px}}
+
+  .photo-tile:nth-child(3),.photo-tile:nth-child(5){background:var(--green);border-color:var(--green-darker)}
+  .business-subtitle{grid-column:2/-1;font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;text-transform:none;line-height:1.4;color:var(--cream);margin:0;text-align:center}
+  .price-grid>.price-card{grid-row:2}
+  .packshot-small img{width:90%;height:90%}
+  @media(max-width:1050px){.price-grid>.price-card{grid-row:auto;order:3}.price-grid>.individual-card{order:1}.business-subtitle{grid-column:1/-1;order:2;text-align:left}}
+
+  a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+  .nav-links a[aria-current="page"]{opacity:1;color:var(--gold)}
+  .instagram .handle{font-size:clamp(16px,3vw,24px)}
+  @media(max-width:950px){nav{gap:14px}.nav-links{gap:14px}nav a{font-size:11px}}
+  @media(max-width:760px){header .wrap{flex-wrap:wrap;gap:10px}header nav{display:contents}.nav-links{display:flex;order:3;width:100%;flex-wrap:wrap;padding:5px 0;gap:8px 16px}.nav-links a{white-space:nowrap}header .btn{margin-left:auto}.instagram .cta-row{flex-wrap:wrap}}
+
+  .biz-hero{background:var(--cream) url('assets/textura-ranchazo.webp') center/cover;text-align:center;padding:72px 0 58px}
+  .biz-hero h1{font-size:clamp(44px,7vw,78px);color:var(--green);text-shadow:2px 2px var(--gold)}
+  .biz-hero .lede{margin:20px auto}.biz-tagline{font-size:clamp(22px,4vw,32px);font-weight:800;color:var(--green);margin:24px 0}
+  .biz-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}.biz-section h2{font-size:clamp(32px,5vw,48px);color:var(--green)}
+  .biz-section{padding:64px 0}.resale-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+  .biz-card{background:var(--cream);border:3px solid var(--green-darker);border-radius:24px;box-shadow:6px 6px var(--green-darker);padding:28px;min-width:0}
+  .resale-card{display:grid;grid-template-columns:130px 1fr;gap:24px;align-items:center}.resale-card img{height:230px;width:100%;object-fit:contain}
+  .biz-card h3{font-size:30px;color:var(--green)}.biz-card p{margin:12px 0}.biz-card dl{margin:20px 0 0}.biz-card dt{font-size:13px;color:var(--ink-soft)}.biz-card dd{margin:0 0 12px;font-weight:800;font-size:22px;color:var(--green)}
+  .biz-restaurants{background:var(--green)}.biz-restaurants h2,.biz-restaurants>.wrap>.lede{color:var(--cream)}.biz-restaurants .eyebrow{color:var(--gold)}
+  .biz-flow{font-family:'IBM Plex Mono',monospace;color:var(--cream);margin:28px 0;font-size:15px}
+  .biz-product{display:flex;gap:18px;align-items:center;margin-bottom:22px}.biz-product img{width:145px;height:155px;object-fit:contain}.biz-product.small img{width:130px}
+  .biz-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px}.biz-metrics div{padding:14px;background:var(--cream-deep);border-radius:12px}.biz-metrics dd{font-family:'Anton',sans-serif;font-weight:400;font-size:32px;margin:5px 0 0;line-height:1.2}.biz-metrics .sales{background:var(--green);grid-column:1/-1}.biz-metrics .sales dt,.biz-metrics .sales dd{color:var(--cream)}
+  .biz-profit{background:var(--gold);border-radius:12px;padding:18px;margin-top:16px}.biz-profit strong{display:block;font-family:'Anton',sans-serif;font-size:36px;font-weight:400;line-height:1.3}.biz-proof{font-weight:800;color:var(--green);border-top:2px solid var(--cream-line);padding-top:18px}
+  .biz-note{color:var(--cream);font-size:13px;max-width:85ch;margin:28px 0 0}.biz-cta{text-align:center;background:var(--cream) url('assets/textura-ranchazo.webp') center/cover}.biz-cta h2{font-size:clamp(32px,5vw,48px);color:var(--green)}.biz-cta .lede{margin:20px auto}.biz-section{scroll-margin-top:130px}
+  @media(max-width:700px){.resale-grid{grid-template-columns:1fr}.biz-card{padding:22px}.resale-card{grid-template-columns:95px 1fr;gap:16px}.resale-card img{height:190px}.biz-product img{width:110px;height:120px}.biz-product.small img{width:100px}.biz-product h3{font-size:25px}.biz-metrics dd{font-size:28px}.biz-flow{font-size:13px}.biz-hero{padding:48px 0}.biz-section{padding:48px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html#top"><img src="assets/logo.png" alt="Ranchazo"></a>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html#producto">Producto</a>
+        <a href="index.html#preparacion">Preparación</a>
+        <a href="index.html#galeria">Galería</a>
+        <a href="negocios.html" aria-current="page">Para negocios</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+      <a class="btn btn-gold" href="https://wa.me/523333880016?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20de%20Ranchazo" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="biz-hero"><div class="wrap"><span class="eyebrow">Tiendas · Distribuidores · Restaurantes</span><h1>Ranchazo para tu negocio</h1><p class="biz-tagline">Más rendimiento. Más sabor. Más margen.</p><p class="lede">Para revender en tu tienda, supermercado o mercado, distribuir a otros negocios o servir con los antojos de tu restaurante.</p><div class="biz-links"><a class="btn btn-green" href="#reventa">Quiero revender</a><a class="btn btn-outline" href="#porciones">Quiero servir porciones</a></div></div></section>
+<section class="biz-section" id="reventa"><div class="wrap"><span class="eyebrow">Para tiendas y distribuidores</span><h2>Vende el sobre. Comparte el antojo.</h2><p class="lede">Una presentación práctica para ofrecer Ranchazo por pieza en tu negocio.</p><div class="resale-grid">
+<article class="biz-card resale-card"><img src="assets/bolsa-17g.png" alt="Sobre Ranchazo de 17 g" loading="lazy"><div><h3>Sobre de 17 g</h3><dl><dt>Precio para negocio</dt><dd>$20 MXN</dd><dt>Rendimiento aproximado</dt><dd>½ litro</dd><dt>Precio sugerido de venta</dt><dd>$30 MXN</dd></dl><div class="biz-profit">Utilidad estimada<strong>$10 por sobre</strong></div></div></article>
+<article class="biz-card resale-card"><img src="assets/ranchazo-tira.webp" alt="Tira de 12 sobres Ranchazo" loading="lazy"><div><h3>Tira de 12 sobres</h3><dl><dt>Inversión por tira</dt><dd>$240 MXN</dd><dt>Obtienes</dt><dd>12 sobres de 17 g</dd></dl><p>Para exhibir en tu tienda y vender por pieza. Consulta condiciones de distribución y pedidos por WhatsApp.</p></div></article>
+</div></div></section>
+<section class="biz-section biz-restaurants" id="porciones"><div class="wrap"><span class="eyebrow">Para restaurantes y servicio de alimentos</span><h2>El extra de sabor que suma a tu negocio</h2><p class="lede">Sirve Ranchazo preparado como complemento de papas, alitas, hamburguesas y más.</p><p class="biz-flow">Inviertes → Preparas → Sirves → Vendes → Ganas</p><div class="resale-grid">
+<article class="biz-card"><div class="biz-product small"><img src="assets/ranchazo-250gr.webp" alt="Bote Ranchazo de 250 g" loading="lazy"><h3>Bote de 250 g</h3></div><dl class="biz-metrics"><div><dt>Inviertes en Ranchazo</dt><dd>$275</dd></div><div><dt>Rendimiento aprox.</dt><dd>7.5 litros</dd></div><div><dt>Porciones de 30 ml</dt><dd>250</dd></div><div><dt>Venta sugerida / porción</dt><dd>$15</dd></div><div class="sales"><dt>Venta potencial</dt><dd>$3,750</dd></div></dl><div class="biz-profit">Utilidad potencial aproximada<strong>$2,687.50</strong></div><p class="biz-proof">250 g → 250 porciones → hasta $3,750 en ventas</p><p>Costo estimado por porción preparada con crema: <strong>$4.25</strong>.</p></article><article class="biz-card"><div class="biz-product "><img src="assets/ranchazo-500gr-limpio.webp" alt="Bote Ranchazo de 500 g" loading="lazy"><h3>Bote de 500 g</h3></div><dl class="biz-metrics"><div><dt>Inviertes en Ranchazo</dt><dd>$500</dd></div><div><dt>Rendimiento aprox.</dt><dd>15 litros</dd></div><div><dt>Porciones de 30 ml</dt><dd>500</dd></div><div><dt>Venta sugerida / porción</dt><dd>$15</dd></div><div class="sales"><dt>Venta potencial</dt><dd>$7,500</dd></div></dl><div class="biz-profit">Utilidad potencial aproximada<strong>$5,420</strong></div><p class="biz-proof">500 g → 500 porciones → hasta $7,500 en ventas</p><p>Costo estimado por porción preparada con crema: <strong>$4.16</strong>.</p></article></div><p class="biz-note">Los cálculos son estimados y pueden variar según los ingredientes utilizados, tamaño de porción, preparación y precio de venta de cada negocio.</p><p class="biz-note">Cifras en pesos mexicanos (MXN). Escenario calculado con venta de todas las porciones a $15. La utilidad resta el costo estimado de preparación con crema; no incluye envases, mano de obra, mermas, impuestos ni otros gastos operativos.</p><p class="biz-note">Estos escenarios usan rendimientos aproximados de 7.5 y 15 litros. La tabla de preparación del sitio conserva las referencias de la etiqueta: 7 y 14 litros.</p></div></section>
+<section class="biz-cta"><div class="wrap"><h2>¿Quieres Ranchazo para tu negocio?</h2><p class="lede">Conoce nuestras presentaciones y precios para negocio.</p><a class="btn btn-gold" href="https://wa.me/523333880016?text=Hola%2C%20quiero%20cotizar%20Ranchazo%20para%20mi%20negocio" target="_blank" rel="noopener">Cotizar por WhatsApp</a></div></section></main>
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Ranchazo">
+    <div class="links">
+      <a href="https://wa.me/523333880016" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://instagram.com/ranchazo_" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@ranchazo" target="_blank" rel="noopener">TikTok</a>
+      <a href="negocios.html">Para negocios</a>
+    </div>
+    <p class="copy">© Ranchazo — Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body></html>
