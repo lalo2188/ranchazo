@@ -302,6 +302,12 @@
   .price-grid>.price-card{grid-row:2}
   .packshot-small img{width:90%;height:90%}
   @media(max-width:1050px){.price-grid>.price-card{grid-row:auto;order:3}.price-grid>.individual-card{order:1}.business-subtitle{grid-column:1/-1;order:2;text-align:left}}
+
+  a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+  .nav-links a[aria-current="page"]{opacity:1;color:var(--gold)}
+  .instagram .handle{font-size:clamp(16px,3vw,24px)}
+  @media(max-width:950px){nav{gap:14px}.nav-links{gap:14px}nav a{font-size:11px}}
+  @media(max-width:760px){header .wrap{flex-wrap:wrap;gap:10px}header nav{display:contents}.nav-links{display:flex;order:3;width:100%;flex-wrap:wrap;padding:5px 0;gap:8px 16px}.nav-links a{white-space:nowrap}header .btn{margin-left:auto}.instagram .cta-row{flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -314,6 +320,7 @@
         <a href="#producto">Producto</a>
         <a href="#preparacion">Preparación</a>
         <a href="#galeria">Galería</a>
+        <a href="negocios.html">Para negocios</a>
         <a href="#contacto">Contacto</a>
       </div>
       <a class="btn btn-gold" href="https://wa.me/523333880016?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20de%20Ranchazo" target="_blank" rel="noopener">WhatsApp</a>
@@ -502,12 +509,13 @@
   <!-- INSTAGRAM -->
   <section class="instagram">
     <div class="wrap">
-      <span class="eyebrow">Instagram</span>
+      <span class="eyebrow">Instagram + TikTok</span>
       <h2>Síguenos el antojo</h2>
-      <p class="lede">Mira recetas, ideas, combinaciones y nuevas formas de disfrutar Ranchazo directamente desde nuestro Instagram.</p>
-      <p class="handle">@ranchazo_</p>
+      <p class="lede">Mira recetas, ideas, combinaciones y nuevas formas de disfrutar Ranchazo en Instagram y TikTok.</p>
+      <p class="handle">Instagram: @ranchazo_ · TikTok: @ranchazo</p>
       <div class="cta-row">
         <a class="btn btn-outline" href="https://instagram.com/ranchazo_" target="_blank" rel="noopener">Síguenos en Instagram</a>
+        <a class="btn btn-outline" href="https://www.tiktok.com/@ranchazo" target="_blank" rel="noopener">Síguenos en TikTok</a>
       </div>
     </div>
   </section>
@@ -532,6 +540,8 @@
     <div class="links">
       <a href="https://wa.me/523333880016" target="_blank" rel="noopener">WhatsApp</a>
       <a href="https://instagram.com/ranchazo_" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@ranchazo" target="_blank" rel="noopener">TikTok</a>
+      <a href="negocios.html">Para negocios</a>
     </div>
     <p class="copy">© Ranchazo — Todos los derechos reservados.</p>
   </div>
